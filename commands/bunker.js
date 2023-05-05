@@ -10,7 +10,7 @@ module.exports = {
     channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
     member: [],
   },
-  aliases: ["techno", 'tech'],
+  aliases: ["techno", "tech"],
   /**
    *
    * @param {import("../structures/DiscordMusicBot")} client
@@ -202,15 +202,6 @@ module.exports = {
   },
 
   SlashCommand: {
-    options: [
-      {
-        name: "song",
-        value: "song",
-        type: 3,
-        required: true,
-        description: "Play music in the voice channel",
-      },
-    ],
     /**
      *
      * @param {import("../structures/DiscordMusicBot")} client
@@ -398,7 +389,7 @@ module.exports = {
               );
             return interaction.send(SongAddedEmbed);
 
-           case "PLAYLIST_LOADED":
+          case "PLAYLIST_LOADED":
             player.queue.add(res.tracks);
             await player.play();
             let SongAdded = new MessageEmbed();
