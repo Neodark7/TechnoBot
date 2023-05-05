@@ -30,9 +30,9 @@ module.exports = {
   //Lavalink
   Lavalink: {
     id: "Main",
-    host: process.env.LAVALINK_HOST ?? "",
-    port: parseInt(process.env.LAVALINK_PORT) ?? 80,
-    pass: process.env.LAVALINK_PASS ?? "password",
+    host: "narco.buses.rocks",
+    port: 2269,
+    pass: "glasshost1984",
     secure: false,
   },
 
