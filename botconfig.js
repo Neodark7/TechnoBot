@@ -33,7 +33,7 @@ module.exports = {
     host: process.env.LAVALINK_HOST ?? "",
     port: parseInt(process.env.LAVALINK_PORT) ?? 80,
     pass: process.env.LAVALINK_PASS ?? "password",
-    secure: process.env.LAVALINK_SECURE ? !!process.env.LAVALINK_SECURE : false,
+    secure: false,
   },
 
   //Please go to https://developer.spotify.com/dashboard/
