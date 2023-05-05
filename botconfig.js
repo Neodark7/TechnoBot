@@ -18,7 +18,7 @@ module.exports = {
   EmbedColor: "RANDOM", //Color of most embeds | Dont edit unless you want a specific color instead of a random one each time
   Permissions: 2205281600, //Bot Inviting Permissions
   Website: process.env.WEBSITE || "http://changeme", //Website where it is hosted at includes http or https || Use "0.0.0.0" if you using Heroku || Do not include /api/callback. Just the website url. I.e. "https://foo.bar"
-  
+
   Presence: {
     status: "online", // You can show online, idle, and dnd
     name: "Music", // The message shown
@@ -30,9 +30,9 @@ module.exports = {
   //Lavalink
   Lavalink: {
     id: "Main",
-    host: process.env.LAVALINK_HOST ?? '',
-    port: process.env.LAVALINK_PORT ?? 80,
-    pass: process.env.LAVALINK_PASS ?? 'password',
+    host: process.env.LAVALINK_HOST ?? "",
+    port: parseInt(process.env.LAVALINK_PORT) ?? 80,
+    pass: process.env.LAVALINK_PASS ?? "password",
     secure: process.env.LAVALINK_SECURE ?? false,
   },
 
