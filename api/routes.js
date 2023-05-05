@@ -30,24 +30,6 @@ fs.readdir(CommandsDir, (err, files) => {
     });
 });
 
-api.get("/", (req, res) => {
-  res.sendFile(join(__dirname, "..", "views", "index.html"));
-});
-
-api.get("/dashboard", Auth, (req, res) => {
-  res.sendFile(join(__dirname, "..", "views", "dashboard.html"));
-});
-
-api.get("/servers", Auth, (req, res) => {
-  res.sendFile(join(__dirname, "..", "views", "servers.html"));
-});
-
-api.get("/servers/:id", Auth, (req, res) => {
-  if (!req.user.guilds.find((x) => x.id == req.params.id))
-    return res.redirect("/servers");
-  res.sendFile(join(__dirname, "..", "views", "server.html"));
-});
-
 api.get("/api/info", (req, res) => {
   res.send({
     ClientID: config.ClientID,
